@@ -1,0 +1,38 @@
+{
+  "created": "2026-11-09T19:47:55",
+  "hostname": "DESKTOP-65QJUSB",
+  "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "processor": "",
+  "cpu_count_logical": 8,
+  "python": "3.14.4",
+  "cmd": "./build/pi {n}",
+  "threads": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "set": {
+    "n": [
+      "400000000"
+    ]
+  },
+  "env_sweep": {},
+  "repeat": 5,
+  "warmup": 1,
+  "omp_env": {},
+  "argv": [
+    "../tools/bench.py",
+    "--cmd",
+    "./build/pi {n}",
+    "--threads",
+    "1,2,4,8,16",
+    "--set",
+    "n=400000000",
+    "--repeat",
+    "5",
+    "--out",
+    "results/pi.csv"
+  ]
+}
